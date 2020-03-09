@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accom_type: MyString
+  d_bed: 1
+  s_bed: 1
+  couch: 1
+  tent: 1
+  allow_kids: false
+  allow_pets: false
+  verified_only: false
+  room_description: MyText
+  booked: false
+  users: one
+
+two:
+  accom_type: MyString
+  d_bed: 1
+  s_bed: 1
+  couch: 1
+  tent: 1
+  allow_kids: false
+  allow_pets: false
+  verified_only: false
+  room_description: MyText
+  booked: false
+  users: two
