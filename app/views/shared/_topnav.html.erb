@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #ffb266">
+    <a class="navbar-brand" href="#"><i class="fas fa-door-open mr-sm-3"> </i>Room for Caring</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="room/find">Find Rooms</a>
+            </li>
+            <li class="nav-item">
+                <%= link_to 'List Room', new_room_path, class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/how-it-works">How it Works</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item">
+                <% if user_signed_in? %>
+                <%= link_to 'Log Out', destroy_user_session_path, method:"delete", class:"nav-link" %>
+                <li class="nav-link"><%= current_user.email%></li>
+                <% else %>
+                <%= link_to 'Log In', new_user_session_path, class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+                <% link_to "Sign Up", new_user_registration_path %>
+                <%end%>
+            </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-3" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+
+
+    </div>
+</nav>

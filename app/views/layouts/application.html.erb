@@ -7,13 +7,43 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <script src="https://kit.fontawesome.com/dc7e8223e9.js" crossorigin="anonymous"></script>
     
   </head>
 
   <body>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+
+  <header>
+    <%= render "shared/topnav" %>
+  </header>
+          <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+          <%end%>
+
+          <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+        <%end%>
+
+
+        <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">ROOM FOR CARING</h1>
+          <p>Search for community driven emergency accommodation in your area.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">List a Room »</a>
+          <a class="btn btn-info btn-lg" href="#" role="button">Search for Rooms »</a>
+          <a class="btn btn-success btn-lg" href="#" role="button">Learn more »</a>
+          </p>
+        </div>
+      </div>
+
+    
     <%= yield %>
+    </main>
+    
+
+    <%= render "shared/footer" %>
   </body>
 </html>
