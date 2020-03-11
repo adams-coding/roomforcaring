@@ -11,7 +11,7 @@ class CreateRooms < ActiveRecord::Migration[6.0]
       t.boolean :verified_only
       t.text :room_description
       t.boolean :booked
-      t.references :users, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

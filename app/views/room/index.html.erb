@@ -1,0 +1,23 @@
+<h2>Room</h2>
+<table class="container">
+    <tr>
+        <th> Accommodation type </th>
+        <th> data </th>
+        <th> data </th>
+        <th> data </th>
+    </tr>
+    <% @room.each do |room| %>
+    <tr>
+        <td> <%= "#{room.accom_type}" %> </td>
+        <td> <%= "#{room.room_description}" %> </td>
+        <td> data </td>
+        <td> data </td>
+    </tr>
+    <%end%>
+    <tr>
+        <th>something</th>
+    </tr>
+
+
+
+</table>

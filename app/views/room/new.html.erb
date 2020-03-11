@@ -1,0 +1,55 @@
+<div class="container">
+    <h2>List Your Room</h2>
+
+    <%= form_with model: @room  do |form| %>
+
+    <div class="row">
+        <%# ACCOMMODATION TYPE radio button %>
+
+        <div class="form-check, col-sm">
+            <h5>Type of Accommodation</h5>
+
+            <%= form.radio_button :accom_type, 'house' %>
+            <%= form.label :accom_type, "House"%>
+            <br />
+
+            <%= form.radio_button :accom_type, 'room' %>
+            <%= form.label :accom_type, 'Room'%>
+            <br />
+
+            <%= form.radio_button :accom_type, 'couch' %>
+            <%= form.label :accom_type, 'Couch'%>
+            <br />
+
+            <%= form.radio_button :accom_type, 'tent' %>
+            <%= form.label :accom_type, 'Tent'%>
+            <br />
+        </div>
+
+        <%# ACCOMMODATION DETAILS dropdown %>
+
+
+
+        <div class="form-check, col-md">
+            <select class="custom-select custom-select-lg mb-5">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+    
+
+    <%# ACCOMMODATION SETTINGS dropdown and checkboxes %>
+
+    <%# ACCOMMODATION DETAILS text area %>
+
+    <%# ACCOMMODATION PHOTOS upload %>
+
+
+
+
+    <%= form.submit "List Room", class: "btn btn-success" %>
+    <% end %>
+    </div>
+</div>

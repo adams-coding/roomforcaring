@@ -11,7 +11,7 @@ one:
   verified_only: false
   room_description: MyText
   booked: false
-  users: one
+  user: one
 
 two:
   accom_type: MyString
@@ -24,4 +24,4 @@ two:
   verified_only: false
   room_description: MyText
   booked: false
-  users: two
+  user: two
