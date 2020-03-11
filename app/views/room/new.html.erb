@@ -6,7 +6,7 @@
     <div class="row">
         <%# ACCOMMODATION TYPE radio button %>
 
-        <div class="form-check, col-sm">
+        <div class="form-check, col-sm bg-info text-white pt-2">
             <h5>Type of Accommodation</h5>
 
             <%= form.radio_button :accom_type, 'house' %>
@@ -30,26 +30,98 @@
 
 
 
-        <div class="form-check, col-md">
-            <select class="custom-select custom-select-lg mb-5">
-                <option selected>Open this select menu</option>
+        <div class="form-check bg-light col-md pt-2">
+        <h5>Accommodation Details</h5>
+            <select class="custom-select custom-select-lg mb-2">
+                <option selected="0">Number of double beds</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
+                <option value="3">Four</option>
+                <option value="3">Five</option>
+                <option value="3">Six</option>
+
             </select>
+
+            <select class="custom-select custom-select-lg mb-2">
+                <option selected="0">Number of single beds</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="3">Four</option>
+                <option value="3">Five</option>
+                <option value="3">Six</option>
+
+            </select>
+
+            <select class="custom-select custom-select-lg mb-2">
+                <option selected>How many people can stay?</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="3">Four</option>
+                <option value="3">Five</option>
+                <option value="3">Six</option>
+
+            </select>
+
+            
         </div>
+        <%# ACCOMMODATION SETTINGS checkboxes %>
+        <div class="form-check, col-4 bg-dark text-white pt-2">
+        <h5>Accommodation Settings</h5>
+            <div class="form-check mt-2 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Allow Children
+                    </label>
+            </div>
+
+            <div class="form-check mt-2 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Allow Pets
+                    </label>
+            </div>
+
+            <div class="form-check mt-2 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Allow Unverified
+                    </label>
+            </div>
+
+            <div class="form-check mt-2 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        SMS Booking Notifications
+                    </label>
+            </div>
+
+            <div class="form-check mt-2 mb-2">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Allow Unverified
+                    </label>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light  pr-4 pl-4">
+        <div class="row">
+        <div class="form-group col-md">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Describe the room. If you have special conditions, please state them here."></textarea>
+        </div>        
     
 
-    <%# ACCOMMODATION SETTINGS dropdown and checkboxes %>
+    
 
     <%# ACCOMMODATION DETAILS text area %>
 
     <%# ACCOMMODATION PHOTOS upload %>
 
-
-
-
-    <%= form.submit "List Room", class: "btn btn-success" %>
+    <%= form.submit "List Room", class: "btn btn-success mt-3" %>
+    </div>
     <% end %>
     </div>
 </div>
