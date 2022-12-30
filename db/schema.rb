@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_03_11_105326) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "available_at", precision: 6, null: false
     t.integer "total_guests"
     t.string "images"
     t.index ["user_id"], name: "index_rooms_on_user_id"
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_03_11_105326) do
     t.boolean "is_guest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "available_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
