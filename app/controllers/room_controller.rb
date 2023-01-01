@@ -9,7 +9,7 @@ class RoomController < ApplicationController
 
     def create 
         @room = Room.new()
-            @room.accom_type = params[:room][:accom_type]
+            @room.accom_type = params[:room][:accom_type][:avail_date][:address_loc]
 
             if @room.valid? && @room.save
                 redirect_to rooms_path
